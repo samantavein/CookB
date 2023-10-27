@@ -42,7 +42,7 @@ body {
 }
 .navbar-title {
   color: rgb(17, 0, 63);
-  font-size: 10px; 
+  font-size: 13px; 
   text-align: center;
   padding-right: 150px; 
   flex: 1; 
@@ -51,7 +51,7 @@ body {
 .navbar a {
   color: rgb(17, 0, 63);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   margin-right: auto; 
   padding: 10px 10px; /* Add padding to the links for spacing */
 }
