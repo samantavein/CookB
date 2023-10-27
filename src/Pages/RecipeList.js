@@ -55,7 +55,7 @@ const RecipeList = ({ searchTerm }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/recipes");
+        const res = await fetch("/db.json");
         const data = await res.json();
         setRecipes(data);
         setLoading(false);
