@@ -36,7 +36,7 @@ const SearchInput = styled.input`
 `;
 const StyledButton = styled.button`
   padding: 8px 10px;
-  background-color: #5900a1;
+  background-color: #a10076;
   color: #fff;
   border: 1px solid white;
   border-radius: 3px;
