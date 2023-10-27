@@ -1,0 +1,82 @@
+/* App.css */
+
+
+body {
+  margin-top: 0px;
+}
+
+
+/*
+.navbar {
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 0, 63);
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.navbar a {
+  color: rgb(17, 0, 63);
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: auto; 
+}
+
+
+.navbar h1 {
+  text-align: center;
+  font-size: 18px; 
+}
+*/
+
+
+/* Define the navigation bar container */
+.navbar {
+  background-color: #ffffff; /* Background color for the navigation bar */
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: space-between; /* Space links and title evenly */
+  align-items: center; /* Vertically center the items */
+  
+}
+.navbar-title {
+  color: rgb(17, 0, 63);
+  font-size: 10px; 
+  text-align: center;
+  padding-right: 150px; 
+  flex: 1; 
+}
+/* Style for the links within the navigation bar */
+.navbar a {
+  color: rgb(17, 0, 63);
+  text-decoration: none;
+  font-size: 15px;
+  margin-right: auto; 
+  padding: 10px 10px; /* Add padding to the links for spacing */
+}
+
+
+
+/*------------------------------------------------------------------*/
+/* Galerijas noforejums*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 5px), 1fr));
+  gap: 6px;
+  padding: 5px;
+  padding-top: 0px;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+

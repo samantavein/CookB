@@ -1,16 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { RecipeProvider } from "./hooks/RecipeContext";
-import './index.css';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-      <RecipeProvider>
-        <App />
-      </RecipeProvider>
-  </BrowserRouter>
-
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
 );

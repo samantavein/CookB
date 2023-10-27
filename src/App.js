@@ -1,32 +1,28 @@
-import React, { useState } from "react";
-import RecipeList from "./Pages/RecipeList";
-
-import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import RecipeDetails from "./Pages/RecipeDetails";
+// App.js
+import React from 'react';
+import './App.css';
+import Navbar from './Navbar';
+import AboutMe from './AboutMe';
+import Gallery from './Gallery'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearchInput = (event) => {
-    setSearchTerm(event.target.value);
-  };
   return (
-  <nav>
+    <div>
+      <Router>
+        <Navbar />
         <div>
-          <Navbar 
-          searchTerm={searchTerm} 
-          handleSearchInput={handleSearchInput} />
+          <Switch>
+            <Route exact path="/AboutMe">
+              <AboutMe />
+            </Route>
+            <Route path="/"> 
+              <Gallery />
+            </Route>
+          </Switch>
         </div>
-        <div >
-          <Routes>
-              <Route path ="/" element={ <RecipeList searchTerm={searchTerm} />} />                                  
-              <Route path ="/recipes/:id"element={<RecipeDetails />} />            
-          </Routes>
-        </div>     
-      </nav>
- 
+      </Router>
+    </div>
   );
 }
 
