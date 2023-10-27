@@ -63,7 +63,7 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(calc(50% - 5px), 1fr));
-  gap: 6px;
+  gap: 8px;
   padding: 5px;
   padding-top: 0px;
 }
