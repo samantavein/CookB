@@ -35,7 +35,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`https://ficuss.store/recipes/${id}`);
+        const res = await fetch(`http://localhost:3000/recipes/${id}`);
         const data = await res.json();
         setRecipes(data);
         setLoading(false);
