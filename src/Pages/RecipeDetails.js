@@ -11,7 +11,7 @@ const Container = styled.form`
   margin: 30px auto;
   max-width: 66%;
   padding: 30px;
-  background-color: white; 
+  background-color: white;
 `;
 const StyledTitle = styled.h2`
   text-align: center;
@@ -34,10 +34,15 @@ const RecipeDetails = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        const res = await fetch(`http://localhost:4001/recipes/${id}`);
+      try {
+        const res = await fetch(`https://ficuss.store/api/recipes/${id}`);
         const data = await res.json();
         setRecipes(data);
         setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      }
     };
     fetchData();
   }, [id, setRecipes]);
@@ -49,14 +54,15 @@ const RecipeDetails = () => {
       <div key={recipes.id}>
         <StyledTitle center>{recipes.title}</StyledTitle>
         <StyledText center>Takes {recipes.time} minutes to make</StyledText>
-        <ul style={{  display: 'flex', justifyContent: "center" }}>
+        <ul style={{ display: 'flex', justifyContent: "center" }}>
           {recipes.ingredients.map((ingredient, index) => (
             <StyledUl key={index}>{index === 0 ? ingredient : `, ${ingredient}`}</StyledUl>
           ))}
-        </ul>       
-        <StyledText>{recipes.method}</StyledText>   
-    </div>
+        </ul>
+        <StyledText>{recipes.method}</StyledText>
+      </div>
     </Container>
   );
 };
+
 export default RecipeDetails;

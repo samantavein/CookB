@@ -74,11 +74,11 @@ const CreateRecipe = () => {
     const time = parseInt(e.target.time.value.trim(), 10);
 
     if (!title || !method || isNaN(time)) {
-      alert("All fields should be filled and time should be a number!");
+      alert("All fields should be filled, and time should be a number!");
       return;
     }
 
-    const res = await fetch("http://localhost:4001/recipes", {
+    const res = await fetch("https://ficuss.store/api/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -125,4 +125,5 @@ const CreateRecipe = () => {
     </Container>
   );
 };
+
 export default CreateRecipe;
