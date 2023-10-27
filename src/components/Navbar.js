@@ -34,17 +34,7 @@ const SearchInput = styled.input`
   border-radius: 3px;
   padding: 5px; 
 `;
-const StyledButton = styled.button`
-  padding: 8px 10px;
-  background-color: #5900a1;
-  color: #fff;
-  border: 1px solid white;
-  border-radius: 3px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 40px;
-  float:right;
-`;
+
 const Navbar = ({ searchTerm, handleSearchInput }) => {
 
   return (
@@ -60,9 +50,6 @@ const Navbar = ({ searchTerm, handleSearchInput }) => {
             value={searchTerm}
             onChange={handleSearchInput}
           />
-          <Link to="/create">
-            <StyledButton>Create recipe</StyledButton>
-          </Link>
         </SearchContainer>
       </FormContainer>
     </NavbarContainer>

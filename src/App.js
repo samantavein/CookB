@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import CreateRecipe from "./Pages/CreateRecipe";
 import RecipeList from "./Pages/RecipeList";
 
 import { Route, Routes } from 'react-router-dom';
@@ -22,8 +21,7 @@ function App() {
         </div>
         <div >
           <Routes>
-              <Route path ="/" element={ <RecipeList searchTerm={searchTerm} />} />                      
-              <Route path ="/create" element={ <CreateRecipe /> } />             
+              <Route path ="/" element={ <RecipeList searchTerm={searchTerm} />} />                                  
               <Route path ="/recipes/:id"element={<RecipeDetails />} />            
           </Routes>
         </div>     
