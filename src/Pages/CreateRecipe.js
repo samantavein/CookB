@@ -78,7 +78,7 @@ const CreateRecipe = () => {
       return;
     }
 
-    const res = await fetch("https://ficuss.store/api/recipes", {
+    const res = await fetch("https://ficuss.store/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
