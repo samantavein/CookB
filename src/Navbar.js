@@ -23,6 +23,8 @@ const Navbar = () => {
     </nav>
     */
 
+<html>
+<body>
     <div class="navbar">
         <div class="navbar-left">
             <Link to="/">Gallery</Link>
@@ -31,8 +33,20 @@ const Navbar = () => {
         <div class="navbar-title">
         <h1 >Samanta Veinberga</h1>
         </div>
+
+        <div class="navbar-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-links">
+                <Link to="/">Gallery</Link>
+                <Link to="/AboutMe">About me</Link>
+            </div>
+        </div>
+
     </div>
 
+    <script src="script.js"> </script>
+    </body>
+    </html>
   );
 }
  

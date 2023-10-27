@@ -56,6 +56,17 @@ body {
   padding: 10px 10px; /* Add padding to the links for spacing */
 }
 
+/* CSS for the three dots (menu icon) */
+.navbar-menu .menu-icon {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+}
+
+/* CSS for the menu links (hidden initially) */
+.navbar-menu .menu-links {
+  display: none;
+}
+
 
 
 /*------------------------------------------------------------------*/
@@ -80,20 +91,43 @@ body {
 }
 
 
-
-
-/* Your existing CSS for the .gallery and .image classes */
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 565px) {
   /* Media query for screens up to 768px wide */
   .gallery {
     grid-template-columns: 1fr; /* Display one image per row */
     gap: 8px;
   }
 
+  /* Media query for screens up to 768px wide */
+  .navbar-left {
+    display: none; /* Hide the two links */
+  }
+  .navbar-menu .menu-icon {
+    display: inline-block; /* Display the menu icon (three dots) */
+    padding-right: 10px;
+  }
+  .navbar-menu .menu-links {
+    position: absolute;
+    background-color: rgb(17, 0, 63); /* Background color for the menu */
+    right: 0;
+    top: 100%;
+    display: none; /* Initially hidden */
+  }
+  .navbar-title {
+    font-size: 10px; 
+    padding-right: 0px; 
+       
+  }
+  
+  /* Style for the links within the navigation bar */
+  .navbar a {
+    font-size: 15px;
 
+  }
 
 }
+
+
 
 
 
