@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CreateRecipe from "./pages/CreateRecipe";
+import RecipeList from "./pages/RecipeList";
+
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import RecipeDetails from "./pages/RecipeDetails";
 
 function App() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchInput = (event) => {
+    setSearchTerm(event.target.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <nav>
+        <div>
+          <Navbar 
+          searchTerm={searchTerm} 
+          handleSearchInput={handleSearchInput} />
+        </div>
+        <div >
+          <Routes>
+              <Route path ="/" element={ <RecipeList searchTerm={searchTerm} />} />                      
+              <Route path ="/create" element={ <CreateRecipe /> } />             
+              <Route path ="/recipes/:id"element={<RecipeDetails />} />            
+          </Routes>
+        </div>     
+      </nav>
+ 
   );
 }
 
