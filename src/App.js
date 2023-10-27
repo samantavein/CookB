@@ -13,12 +13,15 @@ function App() {
         <Navbar />
         <div>
           <Switch>
+
+            <Route exact path="/"> 
+              <Gallery />
+            </Route>
+
             <Route exact path="/AboutMe">
               <AboutMe />
             </Route>
-            <Route path="/"> 
-              <Gallery />
-            </Route>
+
           </Switch>
         </div>
       </Router>

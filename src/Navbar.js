@@ -1,3 +1,41 @@
+
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import './App.css';
+
+function Navbar() {
+    const [menuVisible, setMenuVisible] = useState(false);
+  
+    const toggleMenu = () => {
+      setMenuVisible(!menuVisible);
+    }
+
+  
+    return (
+      <nav className="navbar">
+        <div className="navbar-left">
+          <Link to="/">Gallery</Link>
+          <Link to="/AboutMe">About me</Link>
+        </div>
+        <div className="navbar-title">
+          <h1>Samanta Veinberga</h1>
+        </div>
+        <div className="navbar-menu">
+        <div className="menu-icon" onClick={toggleMenu}>&#9776;</div>
+        <div className={`menu-links ${menuVisible ? 'visible' : ''}`}>
+          <Link to="/">Gallery</Link>
+          <Link to="/AboutMe">About me</Link>
+        </div>
+        </div>
+      </nav>
+    );
+  }
+
+
+export default Navbar;
+
+
+/*
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -8,21 +46,6 @@ import './App.css';
 const Navbar = () => {
   return (
 
-    /*
-    <nav className="navbar">
-      
-      <div >
-        <Link to="/">Gallery</Link>
-      </div>
-      <div >
-        <Link to="/AboutMe">About me</Link>
-      </div>
-      
-        <h1 >Samanta Veinberga</h1>
-      
-    </nav>
-    */
-
 <html>
 <body>
     <div class="navbar">
@@ -31,7 +54,7 @@ const Navbar = () => {
             <Link to="/AboutMe">About me</Link>
         </div>
         <div class="navbar-title">
-        <h1 >Samanta Veinberga</h1>
+            <h1 >Samanta Veinberga</h1>
         </div>
 
         <div class="navbar-menu">
@@ -51,3 +74,4 @@ const Navbar = () => {
 }
  
 export default Navbar;
+*/

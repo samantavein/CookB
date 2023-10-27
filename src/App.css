@@ -74,8 +74,6 @@ body {
   display: none;
 }
 
-
-
 /*------------------------------------------------------------------*/
 /* Galerijas noforejums*/
 .gallery {
@@ -111,18 +109,18 @@ body {
   }
   .navbar-menu .menu-icon {
     display: inline-block; /* Display the menu icon (three dots) */
-    padding-right: 10px;
+    padding-right: 20px;
   }
   .navbar-menu .menu-links {
     position: absolute;
-    background-color: rgb(17, 0, 63); /* Background color for the menu */
+    color: rgb(17, 0, 63); /* Background color for the menu */
     right: 0;
     top: 100%;
     display: none; /* Initially hidden */
   }
   .navbar-title {
     font-size: 10px; 
-    padding-right: 0px; 
+    padding-right: 0;
        
   }
   
