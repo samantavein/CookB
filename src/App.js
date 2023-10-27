@@ -1,27 +1,34 @@
+import React, { useState } from "react";
+import CreateRecipe from "./Pages/CreateRecipe";
+import RecipeList from "./Pages/RecipeList";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Create from './Create'
-import Navbar from './Navbar';
-import Home from "./Home";
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import RecipeDetails from "./Pages/RecipeDetails";
 
 function App() {
-  
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchInput = (event) => {
+    setSearchTerm(event.target.value);
+  };
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <Route exact path ="/">
-              <Home />
-            </Route>
-            <Route exact path ="/create">
-              <Create />             
-            </Route>
-          </Switch>
+  <nav>
+        <div>
+          <Navbar 
+          searchTerm={searchTerm} 
+          handleSearchInput={handleSearchInput} />
         </div>
-      </div>
-    </Router>
+        <div >
+          <Routes>
+              <Route path ="/" element={ <RecipeList searchTerm={searchTerm} />} />                      
+              <Route path ="/create" element={ <CreateRecipe /> } />             
+              <Route path ="/recipes/:id"element={<RecipeDetails />} />            
+          </Routes>
+        </div>     
+      </nav>
+ 
   );
 }
 
