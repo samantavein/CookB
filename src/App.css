@@ -80,3 +80,20 @@ body {
 }
 
 
+
+
+/* Your existing CSS for the .gallery and .image classes */
+
+@media screen and (max-width: 500px) {
+  /* Media query for screens up to 768px wide */
+  .gallery {
+    grid-template-columns: 1fr; /* Display one image per row */
+    gap: 8px;
+  }
+
+
+
+}
+
+
+
