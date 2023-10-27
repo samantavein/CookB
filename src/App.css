@@ -35,16 +35,22 @@ body {
 /* Define the navigation bar container */
 .navbar {
   background-color: #ffffff; /* Background color for the navigation bar */
+  
   display: flex; /* Use flexbox to arrange items horizontally */
   justify-content: space-between; /* Space links and title evenly */
   align-items: center; /* Vertically center the items */
+  position: fixed; /* Make the navigation bar fixed */
+  top: 0; /* Place it at the top of the viewport */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 100;
   
 }
 .navbar-title {
   color: rgb(17, 0, 63);
   font-size: 13px; 
   text-align: center;
-  padding-right: 150px; 
+  padding-right: 200px; 
   flex: 1; 
 }
 /* Style for the links within the navigation bar */
@@ -53,7 +59,8 @@ body {
   text-decoration: none;
   font-size: 18px;
   margin-right: auto; 
-  padding: 10px 10px; /* Add padding to the links for spacing */
+  padding:0px; /* Add padding to the links for spacing */
+  padding-left: 30px;
 }
 
 /* CSS for the three dots (menu icon) */
@@ -91,7 +98,7 @@ body {
 }
 
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 600px) {
   /* Media query for screens up to 768px wide */
   .gallery {
     grid-template-columns: 1fr; /* Display one image per row */
