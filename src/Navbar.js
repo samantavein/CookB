@@ -27,7 +27,7 @@ function Navbar() {
       <div>
         <nav className="navbar">
           <div className="navbar-left">
-            <Link to="/gallery">Gallery</Link>
+            <Link to="/">Gallery</Link>
             <Link to="/AboutMe">About me</Link>
           </div>
 
@@ -46,7 +46,7 @@ function Navbar() {
         </nav>
 
         <div className={menu_class}>
-          <Link to="/gallery" onClick={updateMenu}>Gallery</Link>
+          <Link to="/" onClick={updateMenu}>Gallery</Link>
           <Link to="/AboutMe" onClick={updateMenu}>About Me</Link>
         </div>
       </div>

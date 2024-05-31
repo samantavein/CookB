@@ -14,7 +14,7 @@ function App() {
         <div>
           <Switch>
 
-            <Route exact path="/gallery"> 
+            <Route exact path="/"> 
               <Gallery />
             </Route>
 
