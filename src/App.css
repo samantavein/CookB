@@ -2,40 +2,12 @@
 
 
 body {
-  margin-top: 0px;
+  margin-top: 50px;
 }
-
-
-/*
-.navbar {
-
-  background-color: rgb(255, 255, 255);
-  color: rgb(17, 0, 63);
-  display: flex;
-  align-items: center;
-  
-}
-
-
-.navbar a {
-  color: rgb(17, 0, 63);
-  text-decoration: none;
-  font-size: 17px;
-  margin-right: auto; 
-}
-
-
-.navbar h1 {
-  text-align: center;
-  font-size: 18px; 
-}
-*/
-
 
 /* Define the navigation bar container */
 .navbar {
   background-color: #ffffff; /* Background color for the navigation bar */
-  
   display: flex; /* Use flexbox to arrange items horizontally */
   justify-content: space-between; /* Space links and title evenly */
   align-items: center; /* Vertically center the items */
@@ -44,34 +16,22 @@ body {
   left: 0;
   width: 100%; /* Full width */
   z-index: 100;
-  
 }
 .navbar-title {
   color: rgb(17, 0, 63);
-  font-size: 13px; 
+  font-size: 16px; 
   text-align: center;
-  padding-right: 200px; 
+  padding-right: 170px; 
   flex: 1; 
 }
 /* Style for the links within the navigation bar */
 .navbar a {
   color: rgb(17, 0, 63);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 19px;
   margin-right: auto; 
   padding:0px; /* Add padding to the links for spacing */
   padding-left: 30px;
-}
-
-/* CSS for the three dots (menu icon) */
-.navbar-menu .menu-icon {
-  display: none; /* Initially hidden */
-  cursor: pointer;
-}
-
-/* CSS for the menu links (hidden initially) */
-.navbar-menu .menu-links {
-  display: none;
 }
 
 /*------------------------------------------------------------------*/
@@ -94,45 +54,126 @@ body {
   height: auto;
   display: block;
 }
+/* about me noformejums*/
+
+.aboutme {
+  text-align: center;
+  padding: 20%;
+  padding-top: 0px;
+  padding-bottom: 100px;
+  
+}
+
+.instagram-icon {
+  position: fixed;
+  bottom: 15px;
+  left: 30px;
+  margin-left: auto; /* Push the Instagram icon to the far right */
+}
+
+.instagram-icon img {
+
+  width: 25px; /* Adjust the size of the Instagram icon as needed */
+}
 
 
 @media screen and (max-width: 600px) {
   /* Media query for screens up to 768px wide */
+
+  body {
+    margin-top: 65px;
+  }
   .gallery {
     grid-template-columns: 1fr; /* Display one image per row */
     gap: 8px;
   }
 
-  /* Media query for screens up to 768px wide */
+  .aboutme {
+    padding: 10%;
+    padding-top: 0px;
+  }
+
+  .instagram-icon {
+    left: 20px;
+  }
+  
+  .instagram-icon img {
+    width: 20px; /* Adjust the size of the Instagram icon as needed */
+  }
+
   .navbar-left {
     display: none; /* Hide the two links */
   }
-  .navbar-menu .menu-icon {
-    display: inline-block; /* Display the menu icon (three dots) */
-    padding-right: 20px;
-  }
-  .navbar-menu .menu-links {
-    position: absolute;
-    color: rgb(17, 0, 63); /* Background color for the menu */
-    right: 0;
-    top: 100%;
-    display: none; /* Initially hidden */
-  }
   .navbar-title {
-    font-size: 10px; 
-    padding-right: 0;
-       
+    font-size: 16px;
+    text-align: center;
+    padding-left: 35px;
+    flex: 1;
+    padding-right: 0;  
+  }
+
+  .burger-menu  {
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    
+  }
+  .burger-bar  {
+    width: 20px;
+    height: 0.15em;
+    background-color: rgb(17, 0, 63);
+    border-radius: 5px;
+    margin: 1.8px; /* Space between bars */
+  }
+
+  .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  }  
+  .menu.hidden {
+    display: none;
   }
   
-  /* Style for the links within the navigation bar */
-  .navbar a {
-    font-size: 15px;
-
+  .menu.visible {
+    display: flex;
   }
 
+  .menu a {
+    color: rgb(17, 0, 63);
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px 20px;
+  }
+  
+  .burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.26em, 0.2em);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .burger-bar.clicked:nth-child(2){
+    transform: scale(0.1);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .burger-bar.clicked:nth-child(3){
+    transform: rotate(-45deg) translate(0.3em, -0.30em);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .burger-bar.unclicked{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 }
-
-
-
-
-
